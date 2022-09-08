@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitleTv"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.blaja.home_feature.ui.view.ShowcaseLayout
+                android:id="@+id/upcomingView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:label="@string/upcoming_movies"
+                app:type="linear"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <com.blaja.home_feature.ui.view.ShowcaseLayout
+                android:id="@+id/topRatedView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:label="@string/top_rated_movies"
+                app:type="linear"
+                app:layout_constraintTop_toBottomOf="@id/upcomingView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <com.blaja.home_feature.ui.view.ShowcaseLayout
+                android:id="@+id/recommendedView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:label="@string/recommended"
+                app:type="grid"
+                app:has_action="true"
+                app:layout_constraintTop_toBottomOf="@id/topRatedView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/appTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

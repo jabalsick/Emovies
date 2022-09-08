@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="80dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/ratingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/titleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="@id/titleTv"
+            tools:text="@string/rating_label" />
+
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ratingTv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/originalTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/detailTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTv"
+            tools:text="Original Title" />
+
+        <TextView
+            android:id="@+id/detailTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/white"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/originalTitleTv"
+            tools:text="Sinopsis" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/trailerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/see_trailer"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailTv"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:text="Ver trailer"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

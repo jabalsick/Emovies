@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.blaja.home_feature.ui.HomeFragment"
+        android:label="@string/home_movie_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_Homefragment_to_DetailMovieFragment"
+            app:destination="@id/DetailMovieFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailMovieFragment"
+        android:name="com.blaja.home_feature.ui.DetailMovieFragment"
+        android:label="@string/detail_movie_fragment_label"
+        tools:layout="@layout/fragment_detail_movie">
+        <argument
+            android:name="movie"
+            app:argType="com.blaja.movies_data.model.MovieItem" />
+    </fragment>
+</navigation>

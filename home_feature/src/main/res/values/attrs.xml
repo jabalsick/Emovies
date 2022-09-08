@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShowcaseLayout">
+        <attr name="label" format="string" />
+        <attr name="type" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+        <attr name="has_action" format="boolean" />
+    </declare-styleable>
+</resources>

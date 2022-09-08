@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_main_navgraph"
+    app:startDestination="@+id/splash_navgraph"
+    >
+
+    <include-dynamic
+        android:id="@+id/splash_navgraph"
+        android:name="com.blaja.emovies.splash_feature"
+        app:graphResName="splash_navgraph"
+        app:moduleName="splash_feature" />
+
+</navigation>

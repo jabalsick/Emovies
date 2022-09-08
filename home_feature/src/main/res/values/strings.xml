@@ -1,0 +1,16 @@
+<resources>
+    <string name="home_movie_fragment_label">Home Movie Fragment</string>
+    <string name="detail_movie_fragment_label">Detail Movie Fragment</string>
+    <string name="movie_poster_transition_name" translatable="false">moviePoster%1$s</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="empty_view">No hay elementos para mostrar</string>
+    <string name="upcoming_movies">Próximos Estrenos  &#127916;</string>
+    <string name="top_rated_movies">Tendencia  &#128293;</string>
+    <string name="recommended">Recomendados &#128521;</string>
+    <string name="see_trailer">Ver Trailer</string>
+    <string name="error_message">No pudimos obtener las películas</string>
+    <string name="original_title">Título original: %1$s</string>
+    <string name="rating_label">&#11088; %1$s /10</string>
+    <string name="detail_label">Sinopsis:\n\n%1$s</string>
+</resources>
